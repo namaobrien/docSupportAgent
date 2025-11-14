@@ -1,0 +1,29 @@
+# Environment files
+.env
+.env.local
+.env.*.local
+backend/.env
+
+# Sensitive data
+*.key
+*.pem
+*.cert
+
+# Cache and temporary files
+cache/
+*.log
+*.tmp
+
+# Database
+*.db
+*.sqlite
+
+# Dependencies
+node_modules/
+venv/
+__pycache__/
+
+# Build outputs
+dist/
+build/
+

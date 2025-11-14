@@ -1,0 +1,90 @@
+.review-queue {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.queue-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.queue-filters {
+  display: flex;
+  gap: 2rem;
+}
+
+.review-items {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.review-item {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.review-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 2rem;
+}
+
+.review-reason {
+  flex: 1;
+}
+
+.review-reason h3 {
+  margin: 0.5rem 0 0 0;
+  font-size: 1.125rem;
+}
+
+.review-meta {
+  display: flex;
+  gap: 2rem;
+}
+
+.meta-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 80px;
+}
+
+.meta-label {
+  font-size: 0.75rem;
+  color: var(--gray-500);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.meta-value {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--primary);
+}
+
+.meta-value.positive {
+  color: var(--success);
+}
+
+.meta-value.negative {
+  color: var(--error);
+}
+
+.review-details {
+  padding: 1rem;
+  background: var(--gray-50);
+  border-radius: 0.5rem;
+  color: var(--gray-600);
+}
+
+.review-actions {
+  display: flex;
+  gap: 0.5rem;
+}
+

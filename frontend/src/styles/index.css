@@ -1,0 +1,193 @@
+/* Reset and base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  /* Colors from style guide */
+  --primary: rgb(14, 14, 14);
+  --primary-light: rgb(212, 162, 127);
+  --background-light: rgb(253, 253, 247);
+  --background-dark: rgb(9, 9, 11);
+  
+  --gray-50: rgb(243, 243, 243);
+  --gray-100: rgb(238, 238, 238);
+  --gray-200: rgb(222, 222, 222);
+  --gray-300: rgb(206, 206, 206);
+  --gray-400: rgb(158, 158, 158);
+  --gray-500: rgb(112, 112, 112);
+  --gray-600: rgb(80, 80, 80);
+  --gray-700: rgb(62, 62, 62);
+  --gray-800: rgb(37, 37, 37);
+  --gray-900: rgb(23, 23, 23);
+  
+  /* Semantic colors */
+  --success: rgb(34, 197, 94);
+  --warning: rgb(234, 179, 8);
+  --error: rgb(239, 68, 68);
+  --info: rgb(59, 130, 246);
+}
+
+body {
+  font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  background-color: var(--background-light);
+  color: var(--gray-500);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+.dark body {
+  background-color: var(--background-dark);
+  color: var(--gray-400);
+}
+
+/* Container */
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 600;
+  color: var(--primary);
+  margin-bottom: 1rem;
+}
+
+.dark h1, .dark h2, .dark h3, .dark h4, .dark h5, .dark h6 {
+  color: var(--gray-50);
+}
+
+h1 { font-size: 2.5rem; }
+h2 { font-size: 2rem; }
+h3 { font-size: 1.5rem; }
+
+/* Buttons */
+.btn {
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.75rem;
+  border: none;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+  font-family: inherit;
+}
+
+.btn-primary {
+  background-color: var(--primary);
+  color: white;
+}
+
+.btn-primary:hover {
+  opacity: 0.9;
+}
+
+.btn-secondary {
+  background-color: var(--gray-100);
+  color: var(--primary);
+}
+
+.btn-secondary:hover {
+  background-color: var(--gray-200);
+}
+
+/* Cards */
+.card {
+  background: white;
+  border-radius: 1rem;
+  padding: 1.5rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  border: 1px solid var(--gray-200);
+}
+
+.dark .card {
+  background: var(--gray-900);
+  border-color: var(--gray-800);
+}
+
+/* Inputs */
+input, select {
+  padding: 0.75rem 1rem;
+  border-radius: 0.75rem;
+  border: 1px solid var(--gray-300);
+  font-family: inherit;
+  font-size: 1rem;
+  width: 100%;
+}
+
+input:focus, select:focus {
+  outline: 2px solid var(--primary-light);
+  outline-offset: 2px;
+}
+
+/* Links */
+a {
+  color: var(--primary-light);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Status badges */
+.badge {
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px;
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+.badge-success {
+  background-color: rgba(34, 197, 94, 0.1);
+  color: var(--success);
+}
+
+.badge-warning {
+  background-color: rgba(234, 179, 8, 0.1);
+  color: var(--warning);
+}
+
+.badge-error {
+  background-color: rgba(239, 68, 68, 0.1);
+  color: var(--error);
+}
+
+.badge-info {
+  background-color: rgba(59, 130, 246, 0.1);
+  color: var(--info);
+}
+
+/* Loading spinner */
+.spinner {
+  border: 3px solid var(--gray-200);
+  border-top: 3px solid var(--primary);
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Utility classes */
+.text-center { text-align: center; }
+.mt-1 { margin-top: 0.5rem; }
+.mt-2 { margin-top: 1rem; }
+.mt-4 { margin-top: 2rem; }
+.mb-2 { margin-bottom: 1rem; }
+.mb-4 { margin-bottom: 2rem; }
+.flex { display: flex; }
+.flex-col { flex-direction: column; }
+.gap-2 { gap: 1rem; }
+.gap-4 { gap: 2rem; }
+.items-center { align-items: center; }
+.justify-between { justify-content: space-between; }
+
